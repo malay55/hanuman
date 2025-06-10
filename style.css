@@ -155,7 +155,7 @@ nav {
   max-width: 100%;
   overflow: hidden;
   position: relative;
-  aspect-ratio: 16/9; /* ratio অনুযায়ী height ঠিক থাকবে */
+  aspect-ratio: 16/9;
   background: #f1f1f1;
   border-radius: 10px;
   margin: 15px auto;
@@ -163,17 +163,17 @@ nav {
 
 .slider-track {
   display: flex;
-  width: 500%;
-  height: 100%;
   animation: slideShow 20s infinite;
+  width: calc(100% * 5); /* 5 টা ছবি থাকলে */
 }
 
 .slider-track img {
   width: 100%;
   height: auto;
-  object-fit: contain; /* cover এর বদলে contain করলে ছবি কাটবে না */
-  flex-shrink: 0;
+  object-fit: contain;
+  flex: 0 0 100%;
   border-radius: 10px;
+  transition: transform 0.5s ease-in-out;
 }
 
 @keyframes slideShow {
@@ -196,15 +196,15 @@ nav {
 
 @media (max-width: 768px) {
   .image-slider {
-    aspect-ratio: 16/9; /* মোবাইলে auto height */
+    aspect-ratio: 16/9;
   }
 
   .slider-track img {
-    width: 100%;
-    height: auto;
     object-fit: contain;
+    border-radius: 8px;
   }
 }
+
 
 
   .logo-container {
