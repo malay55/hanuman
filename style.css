@@ -30,7 +30,7 @@ body {
 
 .logo-text h1 {
   margin: 0;
-  font-size: 2.08em;
+  font-size: 2em;
   font-weight: bold;
   color: #005aa7;
 }
@@ -41,7 +41,7 @@ body {
   color: white;
   border-radius: 20px;
   padding: 4px 12px;
-  font-size: 2em;
+  font-size: 1.80em;
   display: inline-block;
   margin-top: 4px;
 }
